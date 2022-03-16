@@ -61,12 +61,6 @@ namespace newland {
   let faceNum = 0
 
 
-  const PortSerial = [
-    [SerialPin.P0, SerialPin.P8],
-    [SerialPin.P1, SerialPin.P12],
-    [SerialPin.P2, SerialPin.P13],
-    [SerialPin.P14, SerialPin.P15],
-  ]
 
   export enum SerialPorts {
     PORT1 = 0,
@@ -263,11 +257,6 @@ namespace newland {
     basic.pause(300)
   }
 
-  //% blockId=newland_init_pw block="Newland init powerbrick|Port %port"
-  //% group="Basic" weight=99
-  export function newland_init_pw(port: SerialPorts): void {
-    newland_init(PortSerial[port][0], PortSerial[port][1])
-  }
 
   //% blockId=newland_lcd_direction block="Newland LCD Dir%dir"
   //% group="Basic" weight=98
